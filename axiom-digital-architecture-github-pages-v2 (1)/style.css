@@ -21,6 +21,20 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 .site-shell { overflow: hidden; }
+.skip-link {
+  position: fixed;
+  z-index: 30;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  transform: translateY(-160%);
+  background: var(--cyan);
+  color: #032033;
+  font-size: 12px;
+  font-weight: 700;
+}
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
 
 .nav {
   position: fixed;
@@ -160,6 +174,7 @@ h1 em { color: var(--cyan); font-style: normal; }
   margin: auto;
   padding: 150px 0;
 }
+.section[id] { scroll-margin-top: 100px; }
 .statement {
   width: min(var(--max), calc(100% - 56px));
   margin: auto;
@@ -176,12 +191,80 @@ h1 em { color: var(--cyan); font-style: normal; }
 .large-copy strong { color: var(--cyan); font-weight: 500; }
 .muted { max-width: 620px; color: var(--muted); }
 
+.workflow-video-section { border-top: 1px solid var(--line); }
+.workflow-video-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  align-items: center;
+  gap: 70px;
+}
+.workflow-video-copy h2 {
+  margin: 22px 0;
+  font: 500 clamp(34px, 4vw, 54px)/1.02 "Space Grotesk", sans-serif;
+  letter-spacing: -.04em;
+}
+.workflow-video-copy p { max-width: 440px; color: var(--muted); font-size: 14px; }
+.workflow-video-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-deep);
+}
+.workflow-video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--bg-deep);
+}
+
 .section-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; }
 .section h2 {
   margin: 0 0 60px;
   font: 500 clamp(42px, 5vw, 72px)/.98 "Space Grotesk", sans-serif;
   letter-spacing: -.045em;
 }
+.appointment-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 100px;
+  margin-top: 45px;
+}
+.appointment-intro h2 { margin: 0 0 24px; }
+.appointment-intro h2 span { color: var(--cyan); }
+.appointment-intro > p { color: #b4ced9; font-size: 15px; }
+.appointment-intro .appointment-note {
+  margin-top: 28px;
+  padding-left: 16px;
+  border-left: 1px solid var(--cyan);
+  color: var(--muted);
+  font-size: 12px;
+}
+.appointment-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.appointment-steps li {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 18px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.appointment-steps li > span { color: var(--cyan); font: 600 11px "Space Grotesk"; }
+.appointment-steps h3 { margin: 0 0 5px; font: 600 19px "Space Grotesk"; }
+.appointment-steps p { margin: 0; color: var(--muted); font-size: 13px; }
+.trust-notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 70px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.trust-notes h3 { margin: 0 0 8px; font: 600 17px "Space Grotesk"; }
+.trust-notes p { margin: 0; color: var(--muted); font-size: 13px; }
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -248,6 +331,40 @@ h1 em { color: var(--cyan); font-style: normal; }
   font-size: 12px;
   letter-spacing: .05em;
 }
+.inquiry-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 90px;
+  margin-top: 70px;
+}
+.inquiry-intro h3 { margin: 22px 0 14px; font: 600 30px/1.1 "Space Grotesk"; }
+.inquiry-intro > p { color: var(--muted); font-size: 14px; }
+.inquiry-intro .inquiry-next { padding-left: 16px; border-left: 1px solid var(--cyan); }
+.inquiry-fallback a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+.inquiry-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-content: start;
+}
+.form-field { display: grid; gap: 8px; }
+.form-field-wide { grid-column: 1 / -1; }
+.form-field label { color: #c6e4ef; font-size: 12px; font-weight: 600; }
+.form-field label span { color: var(--muted); font-weight: 400; }
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: rgba(3, 20, 31, .7);
+  color: var(--white);
+  font: inherit;
+  font-size: 14px;
+}
+.form-field select { color-scheme: dark; }
+.form-field textarea { min-height: 120px; resize: vertical; }
+.inquiry-submit { justify-self: start; cursor: pointer; font-family: inherit; }
+.inquiry-status { align-self: center; margin: 0; color: var(--muted); font-size: 12px; }
 footer {
   width: min(var(--max), calc(100% - 56px));
   margin: auto;
@@ -284,7 +401,7 @@ footer a:hover { color: var(--cyan); }
   .hero-meta { left: 22px; right: 22px; }
   .hero-meta span:nth-child(2) { display: none; }
   .statement, .section { width: calc(100% - 44px); padding: 90px 0; }
-  .statement, .section-heading, .method-layout, .contact-panel { grid-template-columns: 1fr; gap: 35px; }
+  .statement, .section-heading, .method-layout, .appointment-layout, .contact-panel, .inquiry-layout, .workflow-video-layout { grid-template-columns: 1fr; gap: 35px; }
   .statement { padding-top: 80px; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-card, .capability-card:nth-child(odd), .capability-card:nth-child(even) {
@@ -293,7 +410,15 @@ footer a:hover { color: var(--cyan); }
   }
   .capability-card h3 { margin-top: 45px; }
   .contact-panel { padding: 40px 28px; }
+  .trust-notes { grid-template-columns: 1fr; gap: 22px; margin-top: 45px; }
+  .inquiry-form { grid-template-columns: 1fr; }
+  .form-field-wide { grid-column: auto; }
   footer { width: calc(100% - 44px); flex-wrap: wrap; gap: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
 }
 
 
