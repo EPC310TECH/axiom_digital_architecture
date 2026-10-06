@@ -31,8 +31,8 @@ requests need judgment. SEO work supports discoverability but does not guarantee
 rankings; social content is reviewed by a person before publication.
 
 The landing page includes page metadata, Open Graph and Twitter card text, and
-Organization structured data. Add canonical and absolute social-sharing image
-URLs only after the published Pages URL and public image URL are confirmed.
+Organization structured data. Canonical and social image URLs use the verified
+GitHub Pages URL for this repository.
 
 ## Hero media
 
@@ -53,7 +53,6 @@ or store form data. A direct `mailto:` link remains available as a fallback.
 ## Search and social metadata
 
 The page includes a title, description, Open Graph title/description, and
-Organization structured data. The production URL is not configured here, so
-the page intentionally has no guessed canonical URL, `sitemap.xml`,
-`robots.txt` sitemap directive, or absolute `og:image`. Add these once the
-published domain and final public image URL are confirmed.
+Organization structured data, a canonical URL, and Open Graph/Twitter social
+image metadata. No separate `sitemap.xml` or `robots.txt` sitemap directive is
+needed for the current single-page site.
