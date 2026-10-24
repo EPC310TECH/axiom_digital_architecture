@@ -44,3 +44,51 @@ inquiryForm?.addEventListener("submit", event => {
   }
   window.location.href = `mailto:admin@stack.report?subject=${subject}&body=${body}`;
 });
+
+const carousel = document.querySelector(".social-content-carousel");
+if (carousel) {
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  const prevBtn = carousel.querySelector(".carousel-prev");
+  const nextBtn = carousel.querySelector(".carousel-next");
+  const dotsContainer = carousel.querySelector(".carousel-dots");
+  let currentIndex = 0;
+
+  if (slides.length > 0) {
+    slides.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.className = "carousel-dot";
+      dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer?.appendChild(dot);
+    });
+
+    const updateCarousel = () => {
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentIndex);
+      });
+      const dots = dotsContainer?.querySelectorAll(".carousel-dot") || [];
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+      });
+      if (prevBtn) prevBtn.disabled = currentIndex === 0;
+      if (nextBtn) nextBtn.disabled = currentIndex === slides.length - 1;
+    };
+
+    const goToSlide = (index) => {
+      if (index >= 0 && index < slides.length) {
+        currentIndex = index;
+        updateCarousel();
+      }
+    };
+
+    prevBtn?.addEventListener("click", () => goToSlide(currentIndex - 1));
+    nextBtn?.addEventListener("click", () => goToSlide(currentIndex + 1));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") goToSlide(currentIndex - 1);
+      if (event.key === "ArrowRight") goToSlide(currentIndex + 1);
+    });
+
+    updateCarousel();
+  }
+}

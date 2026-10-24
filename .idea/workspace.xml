@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="944764b8-e283-46bc-9486-afb9eb3a507c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/axiom-digital-architecture-github-pages-v2 (1)/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/axiom-digital-architecture-github-pages-v2 (1)/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axiom-digital-architecture-github-pages-v2 (1)/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/axiom-digital-architecture-github-pages-v2 (1)/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axiom-digital-architecture-github-pages-v2 (1)/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/axiom-digital-architecture-github-pages-v2 (1)/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "EPC310TECH"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/EPC310TECH/axiom_digital_architecture.git",
+    "accountId": "e8ff68c5-ccd9-4426-9b90-018da48071f6"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="3L85RdGLOsfJBpnOvYRmJuI2rKX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/xx_1/CascadeProjects/axiom_digital_architecture",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4c141bd692a7-e2d783800521-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26927.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="944764b8-e283-46bc-9486-afb9eb3a507c" name="Changes" comment="" />
+      <created>1792822847939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792822847939</updated>
+    </task>
+    <servers />
+  </component>
+</project>
