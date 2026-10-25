@@ -303,62 +303,71 @@
           </div>
         </div>
       </section>
-
       <section id="contact" class="contact section">
-        <div class="contact-panel">
-          <div>
-            <div class="section-label">05 / CONTACT</div>
-            <h2>Ready to put AI<br>to work?</h2>
-          </div>
-          <div class="contact-right">
-            <p>Tell us what your business already uses, what takes too much time, and what you would like to improve. We’ll start with the workflow, not a one-size-fits-all tool.</p>
-            <a class="contact-link" href="mailto:admin@stack.report?subject=Small%20business%20AI%20workflow">
-              admin@stack.report <span>↗</span>
-            </a>
-          </div>
-        </div>
-        <div class="inquiry-layout">
-          <div class="inquiry-intro">
-            <div class="section-label">A SIMPLE FIRST STEP</div>
-            <h3>Tell us what is taking time.</h3>
-            <p>Share the task you want to improve and the tools involved. We’ll use that context to understand the workflow and discuss whether a practical next step makes sense—no commitment implied.</p>
-            <p class="inquiry-next">Your message is prepared in your email app. Review it and press send there; this website does not submit or store your information.</p>
-            <p class="inquiry-fallback">Prefer email? <a href="mailto:admin@stack.report?subject=Small%20business%20AI%20workflow">Write to admin@stack.report</a>.</p>
-          </div>
-          <form id="inquiry-form" class="inquiry-form">
-            <div class="form-field">
-              <label for="inquiry-name">Your name <span>(required)</span></label>
-              <input id="inquiry-name" name="name" autocomplete="name" maxlength="100" required>
-            </div>
-            <div class="form-field">
-              <label for="inquiry-email">Email address <span>(required)</span></label>
-              <input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required>
-            </div>
-            <div class="form-field">
-              <label for="inquiry-business">Business name <span>(optional)</span></label>
-              <input id="inquiry-business" name="business" autocomplete="organization" maxlength="120">
-            </div>
-            <div class="form-field">
-              <label for="inquiry-topic">What would you like to explore? <span>(optional)</span></label>
-              <select id="inquiry-topic" name="topic">
-                <option value="">Choose a topic</option>
-                <option>Appointment workflow</option>
-                <option>AI integration or automation</option>
-                <option>SEO foundations</option>
-                <option>Social content workflow</option>
-                <option>Other workflow</option>
-              </select>
-            </div>
-            <div class="form-field form-field-wide">
-              <label for="inquiry-message">What task or process would you like to improve? <span>(required)</span></label>
-              <textarea id="inquiry-message" name="message" rows="4" maxlength="1200" required></textarea>
-            </div>
-            <button class="button button-primary inquiry-submit" type="submit">Prepare email <span>↗</span></button>
-            <p id="inquiry-status" class="inquiry-status" aria-live="polite"></p>
-            <noscript><p class="inquiry-status">The form needs JavaScript to prepare an email. Use the direct email link in the left column instead.</p></noscript>
-          </form>
-        </div>
-      </section>
+  <div class="contact-panel">
+    <div>
+      <div class="section-label">05 / CONTACT</div>
+      <h2>Ready to put AI <br> to work?</h2>
+    </div>
+    <div class="contact-right">
+      <p>Tell us what your business already uses, what takes too much time, and what you would like to improve. We’ll start with the workflow, not a one-size-fits-all tool.</p>
+      <a class="contact-link" href="mailto:admin@axiomarch.org?subject=Small%20business%20AI%20workflow">admin@axiomarch.org <span>↗</span></a>
+    </div>
+  </div>
+
+  <div class="inquiry-layout">
+    <div class="inquiry-intro">
+      <div class="section-label">A SIMPLE FIRST STEP</div>
+      <h3>Tell us what is taking time.</h3>
+      <p>Share the task you want to improve and the tools involved. We’ll use that context to understand the workflow and discuss whether a practical next step makes sense—no commitment implied.</p>
+      <p class="inquiry-next">Fill out the form below or send us an email directly.</p>
+      <p class="inquiry-fallback">Prefer email? <a href="mailto:admin@axiomarch.org?subject=Small%20business%20AI%20workflow">Write to admin@axiomarch.org</a>.</p>
+    </div>
+
+    <!-- Unified Web3Forms Inquiry Form -->
+    <form id="inquiry-form" class="inquiry-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Config -->
+      <input type="hidden" name="access_key" value="b9770b31-3e89-4a5d-94ea-39bd3aac8660">
+      <input type="hidden" name="subject" value="New Inquiry from Axiom Digital Architecture">
+      <input type="hidden" name="from_name" value="Axiom Website Contact Form">
+
+      <div class="form-field">
+        <label for="inquiry-name">Your name <span>(required)</span></label>
+        <input id="inquiry-name" name="name" autocomplete="name" maxlength="100" required>
+      </div>
+
+      <div class="form-field">
+        <label for="inquiry-email">Email address <span>(required)</span></label>
+        <input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      </div>
+
+      <div class="form-field">
+        <label for="inquiry-business">Business name <span>(optional)</span></label>
+        <input id="inquiry-business" name="business" autocomplete="organization" maxlength="120">
+      </div>
+
+      <div class="form-field">
+        <label for="inquiry-topic">What would you like to explore? <span>(optional)</span></label>
+        <select id="inquiry-topic" name="topic">
+          <option value="">Choose a topic</option>
+          <option>Appointment workflow</option>
+          <option>AI integration or automation</option>
+          <option>SEO foundations</option>
+          <option>Social content workflow</option>
+          <option>Other workflow</option>
+        </select>
+      </div>
+
+      <div class="form-field form-field-wide">
+        <label for="inquiry-message">What task or process would you like to improve? <span>(required)</span></label>
+        <textarea id="inquiry-message" name="message" rows="4" maxlength="1200" required></textarea>
+      </div>
+
+      <button class="button button-primary inquiry-submit" type="submit">Submit Inquiry <span>↗</span></button>
+      <p id="inquiry-status" class="inquiry-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
     </main>
 
     <footer>
